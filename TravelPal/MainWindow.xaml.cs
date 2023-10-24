@@ -25,5 +25,13 @@ namespace TravelPal
             InitializeComponent();
 
         }
+
+        private void OpenWindow(object sender, RoutedEventArgs e)
+        {
+            RegisterWindow objRegisterWindow = new RegisterWindow();
+            this.Visibility = Visibility.Hidden; //För att stänga mainwindow
+            objRegisterWindow.Show();
+
+        }
     }
 }
