@@ -33,5 +33,18 @@ namespace TravelPal
             objRegisterWindow.Show();
 
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (txtBox1.Text == "Username" && txtBox2.Password == "Password")
+            {
+                this.DialogResult = true; 
+            }
+            else
+            {
+                MessageBox.Show("Incorrect Username or password", "Error", MessageBoxButton.OK);
+            };
+
+        }
     }
 }

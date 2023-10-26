@@ -46,7 +46,7 @@
             VerticalAlignment="Bottom"
             HorizontalAlignment="Right" 
             FontSize="14" />
-        <TextBox 
+        <PasswordBox
             Name="txtbxLo"
             Grid.Row="2"
             Grid.Column="1"
@@ -61,7 +61,7 @@
             Grid.Column="1"
             Content="Register" 
             Height="30" 
-            Width="70"/>
+            Width="70" Click="Button_Click_1"/>
         <ComboBox 
            
             x:Name="cbBoxLand"
