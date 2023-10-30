@@ -19,9 +19,27 @@ namespace TravelPal
     /// </summary>
     public partial class TravelsWindow : Window
     {
+        
+        public string SignInUser { get; set; }  
+        
         public TravelsWindow()
         {
             InitializeComponent();
+            ShowLoggedInUser();
+            
+           
+        }
+
+        public void LoggedInUser(string username)
+        {
+            SignInUser = username;
+            ShowLoggedInUser();
+
+        }
+
+        private void ShowLoggedInUser()
+        {
+            InloggedUserName.Content = "User:  " + SignInUser;
         }
     }
 }

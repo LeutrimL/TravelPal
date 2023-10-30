@@ -20,12 +20,16 @@ namespace TravelPal
     /// </summary>
     public partial class MainWindow : Window
     {
+        string username;
 
         public MainWindow()
         {
             InitializeComponent();
             InitializeUserManager();
+
         }
+
+        
 
         private void InitializeUserManager()
         {
@@ -37,6 +41,8 @@ namespace TravelPal
 
         private void SignIn_Clic(object sender, RoutedEventArgs e)
         {
+          
+
             string username = txtBox1.Text;
             string password = txtPassword.Password;
 
@@ -47,11 +53,14 @@ namespace TravelPal
 
                 this.Close();
                 TravelsWindow travelsWindow = new TravelsWindow();
+                //Visar Användaren som har loggat in längst upp till vänster!!
+                travelsWindow.LoggedInUser(username);
                 travelsWindow.Show();
 
             }
             else
             {
+                //Vid error eller fel så kommer denna upp!! 
                 MessageBox.Show("Wrong Username or password");
             }
         }
@@ -65,7 +74,7 @@ namespace TravelPal
 
             }
 
-        
+
     }
 }
 
