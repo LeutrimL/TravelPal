@@ -24,6 +24,7 @@ namespace TravelPal
         {
             if (user !=null && Users.Contains(user))
             {
+                
                 Users.Remove(user);
             }
         } 
