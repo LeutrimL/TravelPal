@@ -32,6 +32,7 @@ namespace TravelPal
         private void btnRegister_Click(object sender, RoutedEventArgs e)
         {
             string newUsername = txtbxAn.Text;
+            string newPassword = txtbxLo.Password; 
 
             if (UserManager.UsernameExists(newUsername))
             {
@@ -39,7 +40,7 @@ namespace TravelPal
             }
             else 
             {
-                User newUser = new User { Username = newUsername};
+                User newUser = new User { Username = newUsername, Password = newPassword };
                 UserManager.AddUser(newUser);
 
                 MessageBox.Show("Account succecfully Created");

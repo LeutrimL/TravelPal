@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TravelPal"
         mc:Ignorable="d"
-        Title="MainWindow" Height="400" Width="700" Background="MediumSlateBlue">
+        Title="MainWindow" Height="400" Width="700" Background="DodgerBlue">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -88,7 +88,7 @@
         Height="35"
         Background="LightSkyBlue" 
         Grid.RowSpan="4"
-        RenderTransformOrigin="0.613,0.029" Click="Button_Click" />
+        RenderTransformOrigin="0.613,0.029" Click="SignIn_Clic" />
         <Label
             Grid.Column="4"
             Grid.ColumnSpan="3"  

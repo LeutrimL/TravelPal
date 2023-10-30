@@ -24,8 +24,45 @@
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
-        </Grid.RowDefinitions> 
-        
-        
+        </Grid.RowDefinitions>
+        <Button 
+            Content="User"
+            Grid.Column="0" 
+            Grid.Row="1"
+            Height="40"
+            Width="90"/>
+        <Button 
+            Content="Add Travel"
+            Grid.Column="0"
+            Grid.Row="2"
+            Height="40"
+            Width="90"/>
+        <Button
+            Content="Details"
+            Grid.Column="0"
+            Grid.Row="3"
+            Height="40"
+            Width="90"/>
+        <Button 
+            Content="Remove"
+            Grid.Column="0"
+            Grid.Row="3"
+            Height="40"
+            Width="90"/>
+        <Button
+            Content="Info" 
+            Grid.Column="0"
+            Grid.Row="4"
+            Height="40"
+            Width="90"/>
+        <Button 
+            Content="Sign Out"
+            Grid.Column="0"
+            Grid.Row="5"
+            Height="40"
+            Width="90"/>
+
+
+
     </Grid>
 </Window>

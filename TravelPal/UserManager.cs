@@ -10,28 +10,32 @@ using TravelPal.Interface;
 
 namespace TravelPal
 {
-    internal static class UserManager 
+    internal static class UserManager
     {
 
-        public static List<IUser> users { get; set; } = new List<IUser>();
+        public static List<User> Users { get; set; } = new List<User>();
 
-        internal static List<IUser> GetUsers()
+        internal static List<User> GetUsers()
         {
-            return users;
+            return Users;
         }
 
-        public static void removeUser(IUser user)
+        public static void RemoveUser(User user)
         {
-            if (user !=null && users.Contains(user))
+            if (user !=null && Users.Contains(user))
             {
-                users.Remove(user);
+                Users.Remove(user);
             }
         } 
 
         public static bool SignInUser(string username, string password)
         {
-            foreach (IUser user in users)
+          
+            foreach (User user in Users)
             {
+
+                Console.WriteLine($"Checking User: {user.Username}, Password: {user.Password}");
+
                 if (user.Username == username && user.Password == password)
                 { 
                     return true;
@@ -42,9 +46,10 @@ namespace TravelPal
 
         public static bool AddUser(User user)
         {
-            if (user !=null)
+            //Ifall lösenordet är 0 eller tomt, retunera en varning!
+            if (user !=null && !string.IsNullOrEmpty(user.Password))
             {
-                users.Add(user);
+                Users.Add(user);
                 return true;
             }
             return false;
@@ -52,7 +57,7 @@ namespace TravelPal
 
         public static bool UsernameExists(string username)
         {
-            return users.Any(User => User.Username == username);
+            return Users.Any(User => User.Username == username);
         }
 
     }

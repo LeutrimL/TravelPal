@@ -5,74 +5,63 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TravelPal"
         mc:Ignorable="d"
-        Title="SecondWindow" Height="450" Width="800">
-    <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
+        Title="SecondWindow" Height="267" Width="496" Background="MintCream">
+    <Grid Margin="0,0,0,-6">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
 
-            </Grid.ColumnDefinitions>
-            <Label 
-         Content="Välj Användarnamn:"
-         Grid.Row="1" 
-         Grid.ColumnSpan="1"
-         VerticalAlignment="Bottom"
+        </Grid.ColumnDefinitions>
+        <Label 
+         Content="Your Username:"
+         Grid.Row="2"
+         VerticalAlignment="Center"
          HorizontalAlignment="Center" 
          FontSize="14" />
-            <TextBox 
+        <TextBox 
          Name="txtbxAn"
-         Grid.Row="1" 
+         Grid.Row="2" 
          Grid.Column="1"
-         Grid.ColumnSpan="1" 
+         Grid.ColumnSpan="2" 
          Height="25" 
          FontSize="14"
          VerticalAlignment="Bottom"
          VerticalContentAlignment="Bottom"
-         HorizontalContentAlignment="Left"/>
-            <Label 
-         Content="Välj Lösenord:"
-         Grid.Row="2"
+         HorizontalContentAlignment="Left" Margin="10,0,114,8"/>
+        <Label 
+         Content="Your Password:"
+         Grid.Row="3"
          Grid.ColumnSpan="1"
          VerticalAlignment="Bottom"
          HorizontalAlignment="Right" 
-         FontSize="14" />
-            <PasswordBox
+         FontSize="14" Margin="0,0,0,3" />
+        <PasswordBox
          Name="txtbxLo"
-         Grid.Row="2"
+         Grid.Row="3"
          Grid.Column="1"
-         Grid.ColumnSpan="1"
+         Grid.ColumnSpan="2"
          Height="25" 
          FontSize="14"
          VerticalAlignment="Bottom"  
          VerticalContentAlignment="Bottom"
-         HorizontalContentAlignment="Left"/>
-            <Button 
+         HorizontalContentAlignment="Left" Margin="10,0,114,7"/>
+        <Button 
          Name ="btnRegister"
-         Grid.Row="3" 
+         Grid.Row="4" 
          Grid.Column="1"
          Content="Register" 
          Height="30" 
-         Width="70" Click="btnRegister_Click"/>
-            <ComboBox 
-        
-         x:Name="cbBoxLand"
-         Grid.Column="3" 
-         HorizontalAlignment="Left" 
-         Margin="0,22,0,0" 
-         Grid.Row="1" 
-         VerticalAlignment="Top" 
-         Width="120" 
-         SelectionChanged="cbBoxLand_SelectionChanged" />
+         Width="70" Click="btnRegister_Click" Margin="27,7,27,6"/>
 
     </Grid>
 </Window> 
