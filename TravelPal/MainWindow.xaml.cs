@@ -11,7 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
-using System.Windows.Shapes;
+
 
 namespace TravelPal
 {
@@ -20,30 +20,54 @@ namespace TravelPal
     /// </summary>
     public partial class MainWindow : Window
     {
+
+       
+       
         public MainWindow()
         {
             InitializeComponent();
 
+            InitializeUserManager();
+
+            
+
         }
 
-        private void OpenWindow(object sender, RoutedEventArgs e)
+        private void InitializeUserManager()
         {
-            RegisterWindow objRegisterWindow = new RegisterWindow();
-            this.Visibility = Visibility.Hidden; //För att stänga mainwindow
-            objRegisterWindow.Show();
+            
+
+            User newUser = new User { Username = "Username", Password = "Password" };
+            UserManager.AddUser(newUser);
 
         }
+
+        
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if (txtBox1.Text == "Username" && txtBox2.Password == "Password")
+            string username = txtBox1.Text;
+
+            string password = txtPassword.Password;
+
+            bool signInSuccess = UserManager.SignInUser(username, password);
+
+            if (signInSuccess)
             {
-                this.DialogResult = true; 
+                MessageBox.Show("Inloggning lyckades! ");
             }
             else
             {
-                MessageBox.Show("Incorrect Username or password", "Error", MessageBoxButton.OK);
-            };
+                MessageBox.Show("Wrong Username or password");
+            }
+        }
+
+  
+        private void OpenWindow(object sender, RoutedEventArgs e)
+        {
+            SecondWindow objSecondWindow = new SecondWindow();
+            this.Visibility = Visibility.Hidden; 
+            objSecondWindow.Show();
 
         }
     }

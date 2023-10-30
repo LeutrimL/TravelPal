@@ -69,7 +69,7 @@
      Grid.RowSpan="1"
               />
         <PasswordBox
-     Name="txtBox2"
+     Name="txtPassword"
      Grid.Row="3"
      Grid.Column="1"
      Grid.ColumnSpan="3"
