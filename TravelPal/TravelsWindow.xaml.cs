@@ -26,6 +26,7 @@ namespace TravelPal
         {
             InitializeComponent();
             ShowLoggedInUser();
+            ShowTravelSummary();
             
            
         }
@@ -40,6 +41,16 @@ namespace TravelPal
         private void ShowLoggedInUser()
         {
             InloggedUserName.Content = "User:  " + SignInUser;
+        }
+
+        private void ShowTravelSummary()
+        {
+            List<Vacation> vacations = new();
+
+            vacations.Add(new Vacation("London", true));
+            vacations.Add(new Vacation("New York", false));
+
+            deslandinfo.ItemsSource = vacations;
         }
     }
 }

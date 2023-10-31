@@ -8,5 +8,33 @@ namespace TravelPal
 {
     internal class Travel
     {
+       
+
+       public string Destination {  get; set; }
+
+
+        public Travel(string destination)
+        {
+            Destination = destination;
+        }
+
+        public static int Travellers()
+        {
+
+        }
+
+
+        public virtual string GetInfo()
+        {
+            return $"destination: {Destination}"; 
+        }
+
+
+
+
+
+        
+
+
     }
 }

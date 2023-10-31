@@ -68,10 +68,14 @@
             Grid.ColumnSpan="2"
             FontSize="20"
             VerticalAlignment="Center" 
-            HorizontalAlignment="Center"
-            
-            
-            />
+            HorizontalAlignment="Center"/>
+        <ListBox 
+            x:Name="deslandinfo"
+            Grid.Row="1"
+            Grid.Column="2"
+            Grid.RowSpan="5"
+            Grid.ColumnSpan="3"/>
+
 
 
 

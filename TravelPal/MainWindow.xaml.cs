@@ -15,11 +15,10 @@ using TravelPal.Interface;
 
 namespace TravelPal
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
+  
     public partial class MainWindow : Window
     {
+        //Denna string tillhör UserDisplayn!!
         string username;
 
         public MainWindow()
@@ -46,6 +45,7 @@ namespace TravelPal
             string username = txtBox1.Text;
             string password = txtPassword.Password;
 
+            //Ifall man ger rätt Username och Password öppnas TraveslsWindow!!
             bool signInSuccess = UserManager.SignInUser(username, password);
 
             if (signInSuccess)
@@ -68,6 +68,8 @@ namespace TravelPal
 
             private void OpenWindow(object sender, RoutedEventArgs e)
             {
+               
+                //Öppnar SecondWindow/RegisterWindow!!
                 SecondWindow objSecondWindow = new SecondWindow();
                 this.Visibility = Visibility.Hidden;
                 objSecondWindow.Show();

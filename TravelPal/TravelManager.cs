@@ -8,5 +8,18 @@ namespace TravelPal
 {
     internal class TravelManager
     {
+
+        List<Travel> travels { get; set; }
+
+        public void addTravel()
+        {
+
+        }
+
+        public void removeTravel() 
+        {
+        
+        }
+
     }
 }

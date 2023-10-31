@@ -36,17 +36,22 @@ namespace TravelPal
 
             if (UserManager.UsernameExists(newUsername))
             {
+                //Här finns varningsmeddelande ifall Användarnamnet är taget!!
                 MessageBox.Show("Username is taken, please choose another");
             }
             else 
             {
+                //Skapar Användare efter man har anget Username och Passsword!!
                 User newUser = new User { Username = newUsername, Password = newPassword };
                 UserManager.AddUser(newUser);
 
+                //Meddelande ifall det fungerade att skapa konto!!
                 MessageBox.Show("Account succecfully Created");
 
+                //Stänger SecondWindow efter kontot har skapats!!
                 this.Close();
 
+                //Öppnar Mainwindow!
                 MainWindow mainWindow = new MainWindow();
                 mainWindow.Show(); 
             
