@@ -18,10 +18,7 @@ namespace TravelPal
             Destination = destination;
         }
 
-        public static int Travellers()
-        {
-
-        }
+        
 
 
         public virtual string GetInfo()

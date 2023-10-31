@@ -52,5 +52,17 @@ namespace TravelPal
 
             deslandinfo.ItemsSource = vacations;
         }
+
+        private void TrvButton(object sender, RoutedEventArgs e)
+        {
+            AddTravelWindow addTravelWindow = new AddTravelWindow();
+            addTravelWindow.Show();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            TravelDetailsWindow detailsWindow = new TravelDetailsWindow();
+            detailsWindow.Show();
+        }
     }
 }

@@ -1,5 +1,5 @@
 ﻿TravelPal
-
+1.0.0.0
 
 winexe
 C#
@@ -12,9 +12,9 @@ TRACE;DEBUG;NET;NET7_0;NETCOREAPP
 C:\Users\Leutrim Limani\Desktop\Programing\TravelPal\TravelPal\App.xaml
 51018758123
 
-15-2124918416
+17-1029154612
 198-200740077
 AddTravelWindow.xaml;MainWindow.xaml;SecondWindow.xaml;TravelDetailsWindow.xaml;TravelsWindow.xaml;
 
-False
+True
 
