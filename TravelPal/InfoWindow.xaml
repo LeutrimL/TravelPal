@@ -1,0 +1,14 @@
+﻿<Window x:Class="TravelPal.InfoWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TravelPal"
+        mc:Ignorable="d"
+        Title="InfoWindow" Height="400" Width="400" Background="RoyalBlue">
+    <Grid>
+        <Label
+            Content="Hej, TravelPal här.  &#xD;&#xA;  '&#xA;Jag skulle bara vilja berätta för er hur man använder appen&#xA;och vad TravelPal är egentilgen!           &#xA;TravelPal är ett företag som man kan skapar resor med, &#xA;det gör man genom att fylla i alla rutor som             &#xA;kommer upp efter man har loggat in och &#xA;ifall man vill se detaljerna igen &#xA;så trycker man bara på detaljknappen,&#xA;om man vill lägga  till en ny resa&#xA; så gör man det genom att trycka på Add trave&#xD;&#xA;l och fylla i alla rutor!&#xD;&#xA;&#xD;&#xA;/TravelPal" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15" Height="296"/>
+
+    </Grid>
+</Window>

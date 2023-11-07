@@ -41,9 +41,8 @@ namespace TravelPal
             }
             else 
             {
-                //Skapar Användare efter man har anget Username och Passsword!!
-                User newUser = new User { Username = newUsername, Password = newPassword };
-                UserManager.AddUser(newUser);
+                // UserManager ska få en till user
+                UserManager.Users.Add(new User(newUsername, newPassword));
 
                 //Meddelande ifall det fungerade att skapa konto!!
                 MessageBox.Show("Account succecfully Created");

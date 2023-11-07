@@ -5,12 +5,120 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TravelPal"
         mc:Ignorable="d"
-        Title="AddTravelWindow" Height="450" Width="800">
+        Title="AddTravelWindow" Height="450" Width="800" Background="DodgerBlue">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="114.286"/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
         <Label
-            Content="10" 
-            FontSize="100"
+            Grid.Row="1"
+            Content="City:"
+            FontSize="25" 
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"/>
+        <Label
+            Grid.Row="2"
+            Content="Country:"
+            FontSize="25"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"/>
+        <Label
+            Grid.Row="3"
+            Content="Travelers" 
+            FontSize="25"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center" />
+        <TextBox
+            Name="txtCity"
+            Grid.Row="1"
+            Grid.Column="1"
+            Grid.ColumnSpan="2"
+            Height="35"
+            Width="200" />
+        <TextBox
+            Name="txtCountry"
+            Grid.Row="2"
+            Grid.Column="1"
+            Grid.ColumnSpan="2"
+            Height="35"
+            Width="200" />
+        <TextBox 
+            Name="txtTravelers"
+            Grid.Row="3"
+            Grid.Column="1"
+            Grid.ColumnSpan="2"
+            Height="35"
+            Width="200" />
+        <ComboBox
+            Name="cbPurpose"
+            Grid.Row="1"
+            Grid.Column="3"
+            Height="40"
+            SelectionChanged="cbPurpose_SelectionChanged"
+         >
+        </ComboBox>
+
+        <CheckBox 
+            Name="chkAllInclusive"
+            Content="All Inclusive"
+            Visibility="Collapsed" 
+            Grid.Row="3"
+            Grid.Column="3"
             />
+
+        <TextBox
+            Name="txtMeetingDetails"
+            Text ="Meeting Details:" 
+            FontSize="15"
+            Visibility="Collapsed" 
+            Grid.Row="3"
+            Grid.Column="3"
+            Grid.ColumnSpan="2"
+            />
+
+
+        <ComboBox 
+            
+            x:Name ="cbCountry"
+            Grid.Row="1"
+            Grid.Column="5"
+            Height="40" />
+        <Button 
+            
+            FontSize="20"
+            Height="50"
+            Width="100"
+            Grid.Row="4"
+            Grid.Column="1"
+            Grid.ColumnSpan="2" 
+            Content="Save" 
+            Click="Saved_Click" />
+        
+        
+        
+
+
+
+
+
+
+
+
 
     </Grid>
 </Window>

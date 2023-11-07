@@ -11,7 +11,7 @@ namespace TravelPal
         public bool AllInclusive { get; set; }
 
 
-        public Vacation(string destination, bool allInclusive) : base(destination)
+        public Vacation(string destination, bool allInclusive, string country, int travelers) : base(destination, country, travelers)
         {
             AllInclusive = allInclusive;
         }
@@ -19,7 +19,12 @@ namespace TravelPal
         public override string GetInfo()
         {
             string inclusiveText = AllInclusive ? "All - Inclusive" : "Not All-Inclusive";
-            return $"Destination: {Destination},All-Inclusive: {inclusiveText}";
+            return $"Destination: {base.City},All-Inclusive: {inclusiveText}";
+        }
+
+        public override string ToString()
+        {
+            return $"Vacation in {City}, {Country}";
         }
     }
 }

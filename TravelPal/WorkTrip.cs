@@ -10,14 +10,20 @@ namespace TravelPal
     {
         public string MeetingDetails {  get; set; } 
 
-        public WorkTrip(string meetingDetails, string destination) : base(destination)
+        public WorkTrip(string meetingDetails, string destination, string country, int travelers) : base(destination, country, travelers)
         {
             MeetingDetails = meetingDetails;
         }
 
         public override string GetInfo()
         {
-            return $"Destination: {Destination}, Meeting Details: {MeetingDetails}";
+            return $"Destination: {City}, Meeting Details: {MeetingDetails}";
+        }
+
+
+        public override string ToString()
+        {
+            return $"Work Trip to {City}, {Country}";
         }
     }
 }

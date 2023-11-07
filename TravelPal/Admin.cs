@@ -10,10 +10,14 @@ namespace TravelPal
     internal class Admin : IUser
     {
         public string? Username { get; set; }
-        public string? Password { get; set; } 
+        public string? Password { get; set; }
 
-        
 
+        public Admin(string adminusername, string adminpassword)
+        {
+            Username = adminusername;
+            Password = adminpassword;
+        }
 
     }
 }

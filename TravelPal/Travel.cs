@@ -6,32 +6,23 @@ using System.Threading.Tasks;
 
 namespace TravelPal
 {
-    internal class Travel
+    public class Travel
     {
-       
 
-       public string Destination {  get; set; }
+        public string City { get; set; }
+        public string Country {  get; set; }
+        public int Travelers { get; set; }
 
-
-        public Travel(string destination)
+        public Travel(string city, string country, int travelers)
         {
-            Destination = destination;
+            City = city;
+            Country = country;
+            Travelers = travelers;
         }
-
-        
-
 
         public virtual string GetInfo()
         {
-            return $"destination: {Destination}"; 
+            return $"destination: {City}"; 
         }
-
-
-
-
-
-        
-
-
     }
 }

@@ -26,3 +26,5 @@ C:\Users\Leutrim Limani\Desktop\Programing\TravelPal\TravelPal\obj\Debug\net7.0-
 C:\Users\Leutrim Limani\Desktop\Programing\TravelPal\TravelPal\obj\Debug\net7.0-windows\AddTravelWindow.baml
 C:\Users\Leutrim Limani\Desktop\Programing\TravelPal\TravelPal\obj\Debug\net7.0-windows\TravelDetailsWindow.g.cs
 C:\Users\Leutrim Limani\Desktop\Programing\TravelPal\TravelPal\obj\Debug\net7.0-windows\TravelDetailsWindow.baml
+C:\Users\Leutrim Limani\Desktop\Programing\TravelPal\TravelPal\obj\Debug\net7.0-windows\InfoWindow.g.cs
+C:\Users\Leutrim Limani\Desktop\Programing\TravelPal\TravelPal\obj\Debug\net7.0-windows\InfoWindow.baml

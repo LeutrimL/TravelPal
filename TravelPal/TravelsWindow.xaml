@@ -45,19 +45,19 @@
             Grid.Column="0"
             Grid.Row="3"
             Height="40"
-            Width="90"/>
+            Width="90" Click="Remove_Click_1"/>
         <Button
             Content="Info" 
             Grid.Column="0"
             Grid.Row="4"
             Height="40"
-            Width="90"/>
+            Width="90" Click="Button_Click_2"/>
         <Button 
             Content="Sign Out"
             Grid.Column="0"
             Grid.Row="5"
             Height="40"
-            Width="90"/>
+            Width="90" Click="Button_Click_1"/>
         <Label
             x:Name="InloggedUserName" 
             Grid.Row="0"
@@ -66,12 +66,15 @@
             FontSize="20"
             VerticalAlignment="Center" 
             HorizontalAlignment="Center"/>
-        <ListBox 
-            x:Name="deslandinfo"
+        <ListView
+            x:Name="deslandinfo" 
             Grid.Row="1"
             Grid.Column="2"
             Grid.RowSpan="5"
-            Grid.ColumnSpan="3"/>
+            Grid.ColumnSpan="3" SelectionChanged="deslandinfo_SelectionChanged"
+            ItemsSource="{Binding}"
+            /> 
+        
 
 
 

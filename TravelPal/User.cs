@@ -10,9 +10,14 @@ namespace TravelPal
     public class User : IUser
     {
         public string? Username { get; set; }
-        public string? Password { get; set; } 
+        public string? Password { get; set; }
+        public List<Travel> Travels { get; set; } = new List<Travel>();
 
-        List<Travel> travels { get; set; }
+        public User(string adminusername, string adminpassword) 
+        {
+            Username = adminusername;
+            Password = adminpassword;
+        }
 
     }
   
