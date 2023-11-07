@@ -53,64 +53,33 @@ namespace TravelPal
 
         private void LoadTravels()
         {
-           
-            
-                if (UserManager.CurrentlySignedInUser != null)
-                {
-                    if (UserManager.CurrentlySignedInUser is User currentUser)
-                    {
-                        foreach (var travel in currentUser.Travels)
-                        {
-                            deslandinfo.Items.Add(travel);
-                        }
-                    }
-                    else
-                    {
-                        foreach (var user in UserManager.Users)
-                        {
-                            if (user is User)
-                            {
-                                foreach (var travel in ((User)user).Travels)
-                                {
+           if (UserManager.CurrentlySignedInUser != null)
+           {
+              if (UserManager.CurrentlySignedInUser is User currentUser)
+              {
+              foreach (var travel in currentUser.Travels)
+              {
+                  deslandinfo.Items.Add(travel);
+              }
+              }
+              else
+              {
+              foreach (var user in UserManager.Users)
+              {
+                 if (user is User)
+                 {
+                 foreach (var travel in ((User)user).Travels)
+                 {
                                     deslandinfo.Items.Add(travel);
-                                }
-                            }
-                        }
-                    }
-                }
-                else
-                {
-                    // Användaren är inte inloggad, vidta lämpliga åtgärder
-                }
-            
-
-
-
-
-
-
-            //if(UserManager.CurrentlySignedInUser is User)
-            //{
-            //    foreach(var travel in ((User)UserManager.CurrentlySignedInUser).Travels)
-            //    {
-            //        deslandinfo.Items.Add(travel);
-            //    }
-            //}
-            //else
-            //{
-            //    foreach(var user in UserManager.Users)
-            //    {
-            //        if(user is User)
-            //        {
-            //            foreach(var travel in ((User)user).Travels)
-            //            {
-            //                deslandinfo.Items.Add(travel);
-            //            }
-            //        }
-            //    }
-
-            //}
-
+                 }
+              }
+              }
+           }
+           }
+           else
+           {
+              MessageBox.Show("There is a error");
+           }
         }
 
         public void LoggedInUser(string username)
